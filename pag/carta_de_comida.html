@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="icon" href="../img/icono.ico" type="king ber">
+    <title>King Beer · Carta de Comida</title>
+</head>
+<body>
+
+<!-- Video de fondo -->
+<video autoplay muted loop playsinline class="video-background">
+    <source src="../video/presentacion.mp4" type="video/mp4">
+</video>
+
+<!-- Overlay oscuro -->
+<div class="video-overlay"></div>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="../img/logo2.png" alt="Logo King Beer" class="main-logo">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/pag/camarero.html">COMIDA</a></li>
+            <li><a href="/pag/recepcionista.html">TRAGOS Y CERVEZAS</a></li>
+            <li><a href="/pag/bartender.html">ENVIÁ TU CV</a></li>
+        </ul>
+    </nav>
+    <div class="header-right">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <a href="/pag/runner.html" class="nav-reserva">RESERVAR</a>
+    </div>
+</header>
+
+<!-- CARRUSEL DE CATEGORÍAS -->
+<div class="categorias-wrapper">
+    <div class="categorias-carrusel">
+        <a href="#principales" class="categoria-card">
+            <i class="ti ti-tools-kitchen-2"></i>
+            <span>PRINCIPALES</span>
+        </a>
+        <a href="#hamburguesas" class="categoria-card">
+            <i class="ti ti-burger"></i>
+            <span>HAMBURGUESAS</span>
+        </a>
+        <a href="#pizzas" class="categoria-card">
+            <i class="ti ti-pizza"></i>
+            <span>PIZZAS</span>
+        </a>
+        <a href="#milanesas" class="categoria-card">
+            <i class="ti ti-cut"></i>
+            <span>MILANESAS</span>
+        </a>
+        <a href="#picadas" class="categoria-card">
+            <i class="ti ti-cheese"></i>
+            <span>PICADAS</span>
+        </a>
+        <a href="#sandwiches" class="categoria-card">
+            <i class="ti ti-bread"></i>
+            <span>SANDWICHES</span>
+        </a>
+        <a href="#carlitos" class="categoria-card">
+            <i class="ti ti-bread"></i>
+            <span>CARLITOS</span>
+        </a>
+        <a href="#tapeos" class="categoria-card">
+            <i class="ti ti-salad"></i>
+            <span>TAPEOS</span>
+        </a>
+        <a href="#vegetariano" class="categoria-card">
+            <i class="ti ti-leaf"></i>
+            <span>VEGETARIANO</span>
+        </a>
+        <a href="#vegano" class="categoria-card">
+            <i class="ti ti-plant"></i>
+            <span>VEGANO</span>
+        </a>
+        <a href="#celiaco" class="categoria-card">
+            <i class="ti ti-ban"></i>
+            <span>CELÍACO</span>
+        </a>
+        <a href="#combos" class="categoria-card">
+            <i class="ti ti-stack"></i>
+            <span>COMBOS</span>
+        </a>
+        <a href="#postres" class="categoria-card">
+            <i class="ti ti-ice-cream"></i>
+            <span>POSTRES</span>
+        </a>
+        <a href="#copas" class="categoria-card">
+            <i class="ti ti-glass"></i>
+            <span>COPAS HELADAS</span>
+        </a>
+    </div>
+</div>
+
+<!-- CONTENIDO: PRINCIPALES -->
+<section id="principales" class="menu-section">
+    <h2 class="section-title">PRINCIPALES</h2>
+    <p class="section-nota">Pagando en efectivo tenés un 20% de descuento</p>
+
+    <div class="platos-grid">
+
+        <div class="plato-card" onclick="abrirModal('ternera')">
+            <div class="plato-img placeholder">
+                <i class="ti ti-tools-kitchen-2"></i>
+            </div>
+            <div class="plato-info">
+                <h3>TERNERA BRASEADA</h3>
+                <span class="precio-tarjeta">$21.000</span>
+            </div>
+        </div>
+
+        <div class="plato-card" onclick="abrirModal('bondiola')">
+            <div class="plato-img placeholder">
+                <i class="ti ti-tools-kitchen-2"></i>
+            </div>
+            <div class="plato-info">
+                <h3>BONDIOLA DE CERDO</h3>
+                <span class="precio-tarjeta">$19.875</span>
+            </div>
+        </div>
+
+        <div class="plato-card" onclick="abrirModal('pollo')">
+            <div class="plato-img placeholder">
+                <i class="ti ti-tools-kitchen-2"></i>
+            </div>
+            <div class="plato-info">
+                <h3>PECHUGA DE POLLO</h3>
+                <span class="precio-tarjeta">$18.625</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- HAMBURGUESAS -->
+<section id="hamburguesas" class="menu-section">
+    <h2 class="section-title">HAMBURGUESAS CASERAS</h2>
+    <p class="section-nota">Con papas fritas · Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+
+        <div class="plato-card" onclick="abrirModal('king')">
+            <div class="plato-img placeholder">
+                <i class="ti ti-burger"></i>
+            </div>
+            <div class="plato-info">
+                <h3>KING</h3>
+                <span class="precio-tarjeta">$19.875</span>
+            </div>
+        </div>
+
+        <div class="plato-card" onclick="abrirModal('extrema')">
+            <div class="plato-img placeholder">
+                <i class="ti ti-burger"></i>
+            </div>
+            <div class="plato-info">
+                <h3>EXTREMA</h3>
+                <span class="precio-tarjeta">$18.625</span>
+            </div>
+        </div>
+
+        <div class="plato-card" onclick="abrirModal('completa')">
+            <div class="plato-img placeholder">
+                <i class="ti ti-burger"></i>
+            </div>
+            <div class="plato-info">
+                <h3>COMPLETA</h3>
+                <span class="precio-tarjeta">$17.375</span>
+            </div>
+        </div>
+
+        <div class="plato-card" onclick="abrirModal('vegetariana')">
+            <div class="plato-img placeholder">
+                <i class="ti ti-burger"></i>
+            </div>
+            <div class="plato-info">
+                <h3>VEGETARIANA</h3>
+                <span class="precio-tarjeta">$17.375</span>
+            </div>
+        </div>
+
+        <div class="plato-card" onclick="abrirModal('cheese')">
+            <div class="plato-img placeholder">
+                <i class="ti ti-burger"></i>
+            </div>
+            <div class="plato-info">
+                <h3>CHEESE</h3>
+                <span class="precio-tarjeta">$14.875</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="pizzas" class="menu-section">
+    <h2 class="section-title">PIZZAS</h2>
+    <p class="section-nota">4 u 8 porciones · Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('pizza_texas')">
+            <div class="plato-img placeholder"><i class="ti ti-pizza"></i></div>
+            <div class="plato-info"><h3>TEXAS KING</h3><span class="precio-tarjeta">$21.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pizza_green')">
+            <div class="plato-img placeholder"><i class="ti ti-pizza"></i></div>
+            <div class="plato-info"><h3>GREEN</h3><span class="precio-tarjeta">$19.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pizza_rucula')">
+            <div class="plato-img placeholder"><i class="ti ti-pizza"></i></div>
+            <div class="plato-info"><h3>RÚCULA</h3><span class="precio-tarjeta">$19.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pizza_pollo')">
+            <div class="plato-img placeholder"><i class="ti ti-pizza"></i></div>
+            <div class="plato-info"><h3>POLLO A LA CREMA</h3><span class="precio-tarjeta">$19.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pizza_especial')">
+            <div class="plato-img placeholder"><i class="ti ti-pizza"></i></div>
+            <div class="plato-info"><h3>ESPECIAL</h3><span class="precio-tarjeta">$18.000</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pizza_napolitana')">
+            <div class="plato-img placeholder"><i class="ti ti-pizza"></i></div>
+            <div class="plato-info"><h3>NAPOLITANA</h3><span class="precio-tarjeta">$16.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pizza_fugazza')">
+            <div class="plato-img placeholder"><i class="ti ti-pizza"></i></div>
+            <div class="plato-info"><h3>FUGAZZA</h3><span class="precio-tarjeta">$16.000</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pizza_muzza')">
+            <div class="plato-img placeholder"><i class="ti ti-pizza"></i></div>
+            <div class="plato-info"><h3>MUZZARELLA</h3><span class="precio-tarjeta">$14.875</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- MILANESAS -->
+<section id="milanesas" class="menu-section">
+    <h2 class="section-title">MILANESAS A LA PIZZA</h2>
+    <p class="section-nota">Con papas fritas · Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('mil_kingbeer')">
+            <div class="plato-img placeholder"><i class="ti ti-cut"></i></div>
+            <div class="plato-info"><h3>KING BEER</h3><span class="precio-tarjeta">$21.000</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('mil_especial')">
+            <div class="plato-img placeholder"><i class="ti ti-cut"></i></div>
+            <div class="plato-info"><h3>ESPECIAL</h3><span class="precio-tarjeta">$19.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('mil_napolitana')">
+            <div class="plato-img placeholder"><i class="ti ti-cut"></i></div>
+            <div class="plato-info"><h3>NAPOLITANA</h3><span class="precio-tarjeta">$19.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('mil_gratinada')">
+            <div class="plato-img placeholder"><i class="ti ti-cut"></i></div>
+            <div class="plato-info"><h3>GRATINADA CON MUZZA</h3><span class="precio-tarjeta">$18.625</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('mil_sola')">
+            <div class="plato-img placeholder"><i class="ti ti-cut"></i></div>
+            <div class="plato-info"><h3>MILANESA</h3><span class="precio-tarjeta">$18.000</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- PICADAS -->
+<section id="picadas" class="menu-section">
+    <h2 class="section-title">PICADAS</h2>
+    <p class="section-nota">2 o 4 personas · Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('pic_ciudad')">
+            <div class="plato-img placeholder"><i class="ti ti-cheese"></i></div>
+            <div class="plato-info"><h3>CIUDAD</h3><span class="precio-tarjeta">desde $37.250</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pic_premium')">
+            <div class="plato-img placeholder"><i class="ti ti-cheese"></i></div>
+            <div class="plato-info"><h3>TABLA PREMIUM</h3><span class="precio-tarjeta">desde $42.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pic_parrillita')">
+            <div class="plato-img placeholder"><i class="ti ti-cheese"></i></div>
+            <div class="plato-info"><h3>PARRILLITA</h3><span class="precio-tarjeta">desde $43.625</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- SANDWICHES -->
+<section id="sandwiches" class="menu-section">
+    <h2 class="section-title">SANDWICHES ESPECIALES</h2>
+    <p class="section-nota">Con papas fritas · Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('sand_ternera')">
+            <div class="plato-img placeholder"><i class="ti ti-bread"></i></div>
+            <div class="plato-info"><h3>TERNERA BRASEADA</h3><span class="precio-tarjeta">$19.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('sand_bondiola')">
+            <div class="plato-img placeholder"><i class="ti ti-bread"></i></div>
+            <div class="plato-info"><h3>BONDIOLA BRASEADA</h3><span class="precio-tarjeta">$18.625</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('sand_pollo')">
+            <div class="plato-img placeholder"><i class="ti ti-bread"></i></div>
+            <div class="plato-info"><h3>POLLO</h3><span class="precio-tarjeta">$17.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('sand_milanesa')">
+            <div class="plato-img placeholder"><i class="ti ti-bread"></i></div>
+            <div class="plato-info"><h3>MILANESA KING</h3><span class="precio-tarjeta">$17.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('sand_charly')">
+            <div class="plato-img placeholder"><i class="ti ti-bread"></i></div>
+            <div class="plato-info"><h3>CHARLY KING</h3><span class="precio-tarjeta">$28.625</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- CARLITOS -->
+<section id="carlitos" class="menu-section">
+    <h2 class="section-title">CARLITOS</h2>
+    <p class="section-nota">Con papas fritas · Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('carl_charly')">
+            <div class="plato-img placeholder"><i class="ti ti-bread"></i></div>
+            <div class="plato-info"><h3>CHARLY KING</h3><span class="precio-tarjeta">$28.625</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('carl_clasico')">
+            <div class="plato-img placeholder"><i class="ti ti-bread"></i></div>
+            <div class="plato-info"><h3>CLÁSICO</h3><span class="precio-tarjeta">$17.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('carl_tostado')">
+            <div class="plato-img placeholder"><i class="ti ti-bread"></i></div>
+            <div class="plato-info"><h3>TOSTADO</h3><span class="precio-tarjeta">$17.375</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- TAPEOS -->
+<section id="tapeos" class="menu-section">
+    <h2 class="section-title">PAPAS Y TAPEOS</h2>
+    <p class="section-nota">Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('tap_papasking')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>PAPAS KING</h3><span class="precio-tarjeta">$17.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('tap_papascream')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>PAPAS CREAM</h3><span class="precio-tarjeta">$17.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('tap_papascheddar')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>PAPAS CON CHEDDAR</h3><span class="precio-tarjeta">$14.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('tap_papasfritas')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>PAPAS FRITAS</h3><span class="precio-tarjeta">$12.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('tap_pollo')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>TIRAS DE POLLO</h3><span class="precio-tarjeta">$18.500</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('tap_bastones')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>BASTONES DE MUZZA</h3><span class="precio-tarjeta">$18.500</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('tap_rabas')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>RABAS</h3><span class="precio-tarjeta">$23.625</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('tap_queso')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>PLATO DE QUESO</h3><span class="precio-tarjeta">$12.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('tap_aceitunas')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>DIP ACEITUNAS</h3><span class="precio-tarjeta">$9.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('tap_mani')">
+            <div class="plato-img placeholder"><i class="ti ti-salad"></i></div>
+            <div class="plato-info"><h3>DIP MANÍ</h3><span class="precio-tarjeta">$3.500</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- VEGETARIANO -->
+<section id="vegetariano" class="menu-section">
+    <h2 class="section-title">MENÚ VEGETARIANO</h2>
+    <p class="section-nota">Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('veg_ensalada')">
+            <div class="plato-img placeholder"><i class="ti ti-leaf"></i></div>
+            <div class="plato-info"><h3>ENSALADA DE LA HUERTA</h3><span class="precio-tarjeta">$18.625</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('vegetariana')">
+            <div class="plato-img placeholder"><i class="ti ti-leaf"></i></div>
+            <div class="plato-info"><h3>BURGER VEGETARIANA</h3><span class="precio-tarjeta">$17.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('pizza_green')">
+            <div class="plato-img placeholder"><i class="ti ti-leaf"></i></div>
+            <div class="plato-info"><h3>PIZZA GREEN</h3><span class="precio-tarjeta">desde $19.875</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- VEGANO -->
+<section id="vegano" class="menu-section">
+    <h2 class="section-title">MENÚ VEGANO</h2>
+    <p class="section-nota">Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('vegan_medallones')">
+            <div class="plato-img placeholder"><i class="ti ti-plant"></i></div>
+            <div class="plato-info"><h3>2 MEDALLONES CON ENSALADA</h3><span class="precio-tarjeta">$19.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('vegan_ensalada')">
+            <div class="plato-img placeholder"><i class="ti ti-plant"></i></div>
+            <div class="plato-info"><h3>ENSALADA VEGANA</h3><span class="precio-tarjeta">$18.500</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- CELÍACO -->
+<section id="celiaco" class="menu-section">
+    <h2 class="section-title">MENÚ CELÍACO</h2>
+    <p class="section-nota">Sin TACC · Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('cel_pizza')">
+            <div class="plato-img placeholder"><i class="ti ti-ban"></i></div>
+            <div class="plato-info"><h3>PIZZA MUZZARELLA</h3><span class="precio-tarjeta">$19.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cel_empanadas')">
+            <div class="plato-img placeholder"><i class="ti ti-ban"></i></div>
+            <div class="plato-info"><h3>EMPANADAS</h3><span class="precio-tarjeta">$12.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cel_cerveza')">
+            <div class="plato-img placeholder"><i class="ti ti-ban"></i></div>
+            <div class="plato-info"><h3>CERVEZA CELÍACO</h3><span class="precio-tarjeta">$9.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cel_sidra')">
+            <div class="plato-img placeholder"><i class="ti ti-ban"></i></div>
+            <div class="plato-info"><h3>SIDRA 1888</h3><span class="precio-tarjeta">$11.000</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- COMBOS -->
+<section id="combos" class="menu-section">
+    <h2 class="section-title">COMBOS</h2>
+    <p class="section-nota">De Domingo a Jueves · No válido vísperas o feriados · Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('combo_cheese')">
+            <div class="plato-img placeholder"><i class="ti ti-stack"></i></div>
+            <div class="plato-info"><h3>HAMBURGUESA CHEESE</h3><span class="precio-tarjeta">$19.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('combo_papas')">
+            <div class="plato-img placeholder"><i class="ti ti-stack"></i></div>
+            <div class="plato-info"><h3>PAPAS CHEDDAR</h3><span class="precio-tarjeta">$24.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('combo_pollo')">
+            <div class="plato-img placeholder"><i class="ti ti-stack"></i></div>
+            <div class="plato-info"><h3>TIRITAS DE POLLO</h3><span class="precio-tarjeta">$28.500</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('combo_pizza')">
+            <div class="plato-img placeholder"><i class="ti ti-stack"></i></div>
+            <div class="plato-info"><h3>PIZZA MUZZA 8 POR.</h3><span class="precio-tarjeta">$39.875</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- POSTRES -->
+<section id="postres" class="menu-section">
+    <h2 class="section-title">POSTRES</h2>
+    <p class="section-nota">Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('post_brownie')">
+            <div class="plato-img placeholder"><i class="ti ti-ice-cream"></i></div>
+            <div class="plato-info"><h3>BROWNIE CON AMERICANA</h3><span class="precio-tarjeta">$8.000</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('post_flan')">
+            <div class="plato-img placeholder"><i class="ti ti-ice-cream"></i></div>
+            <div class="plato-info"><h3>FLAN</h3><span class="precio-tarjeta">$6.000</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('post_helado2')">
+            <div class="plato-img placeholder"><i class="ti ti-ice-cream"></i></div>
+            <div class="plato-info"><h3>HELADO 2 BOCHAS</h3><span class="precio-tarjeta">$7.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('post_helado1')">
+            <div class="plato-img placeholder"><i class="ti ti-ice-cream"></i></div>
+            <div class="plato-info"><h3>HELADO 1 BOCHA</h3><span class="precio-tarjeta">$4.875</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="cerrarModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="cerrarModal()">✕</button>
+        <div class="modal-img placeholder">
+            <i class="ti ti-pizza"></i>
+        </div>
+        <h2 class="modal-titulo" id="modal-titulo"></h2>
+        <p class="modal-desc" id="modal-desc"></p>
+        <div class="modal-precios" id="modal-precios">
+            <!-- se llena dinámicamente con JS -->
+        </div>
+    </div>
+</div>
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>King Beer · Carta de comida</p>
+    <span>La experiencia del cliente comienza en cada detalle</span>
+</footer>
+
+<script src="../script/java.js"></script>
+</body>
+</html>

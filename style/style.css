@@ -1,0 +1,769 @@
+/* VARIABLES DE COLOR */
+:root {
+    --color-bg: #252525;
+    --color-surface: #111827;
+    --color-surface-hover: #1f2937;
+    --color-text: #f3f4f6;
+    --color-primary: #d4af37;
+    --color-primary-hover: #f5d86ec2;
+    --color-primary-hover: #b8962e;
+    --color-border: #374151;
+    --color-dark: #020617;
+    --color-gold-light: #f5d76e;
+    --color-gold-dark: #8c6a1c;
+}
+
+
+*{  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY */
+body {
+    font-family: "Montserrat", sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+/*---- HOME -----*/
+/* Video de fondo FIJO */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Filtro oscuro para que el texto se lea siempre */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Contenedor del contenido */
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+/* Primera vista (Logo y Título) */
+.hero-full {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    padding: 3px 10px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto 0;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);/* Fondo semi-transparente */
+    backdrop-filter: blur(10px);
+    padding: 3px 2px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #d4af37;
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2px;
+}
+
+.card:hover {
+    background: #d4af37;
+    color: black;
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 25px;
+    color: #d4af37;
+}
+
+.card:hover i {
+    color: black;
+}
+
+/* VIDEO DE FONDO CONFIGURACIÓN */
+
+.glass_bcg {
+    filter: blur(8px) brightness(0.6);
+    transform: scale(1.05);
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+video {
+    object-fit: cover;
+}
+
+
+/*---- FOOTER ----*/
+
+.footer {
+    justify-content: flex-end;
+    padding: 30px 20px;
+    text-align: center;
+    margin-left: 0;
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--color-text);
+    border-top: 1px solid var(--color-border);
+    opacity: 0.8;
+}
+
+.main-content + .footer {
+    width: 100%;
+}
+
+.footer p {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.footer span {
+    font-size: 0.85rem;
+    color: var(--color-gold-light);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 10px auto 0;
+        max-width: 300px
+    }
+
+    .main-logo {
+        width: 180px;
+    }
+    .footer {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 10px auto 0;
+        max-width: 300px
+    }
+    .cards-container {
+        padding: 3px 10px 40px;
+    }
+    .card {
+        padding: 7px 1px;
+        gap: 8px;
+    }
+    .card i {
+        font-size: 22px;
+    }
+    .footer {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+/*---- CARTA DE COMIDA ----*/
+/*---- HEADER ----*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    z-index: 1000;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: var(--color-surface);
+    backdrop-filter: blur(10px);
+    padding: 0 30px;
+    height: 65px;
+
+
+    /* ----- animacion -----*/
+
+    container-type: inline-size;
+    container-name: header;
+    animation:header-movement both;
+    animation-timeline:scroll();
+    animation-range: 10px 80px;
+
+    }
+
+
+.header .main-logo{
+    width: 100px;
+    padding: 0px;
+    margin: 0;
+}
+
+.nav-list {
+    display: flex;
+    overflow-x: auto;
+    list-style: none;
+    margin: 0;
+    gap: 20px;
+    padding-top: 8px 10px;
+}
+
+.nav-list li {
+    flex: 0 0 auto;
+}
+
+.nav-list a {
+    display: block;
+    padding: 14px 5px;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    border-radius: 8px;
+    background: var(--color-primary-hover);
+    color: #000;
+    transition: all 0.25s ease;
+}
+
+.nav-reserva {
+    background: var(--color-primary);
+    color: #000;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition:background 0.25s;
+    white-space: nowrap;
+}
+
+.nav-reserva:hover {
+    background: var(--color-gold-light);
+
+}
+
+/*---- HEADER ANIMATION ----*/
+
+@keyframes header-movement {
+    from {
+        background: rgba(17, 24, 39, 0.7);;
+    }
+
+    to {
+        background: rgba(17, 24, 39, 0.95);
+        backdrop-filter: blur(8px);
+        color:#fff;
+    }
+}
+
+/*----- RESPONSIVE -----*/
+
+.menu-toggle {
+    display: none;
+}
+
+/* El ícono de hamburguesa solo se muestra en móvil */
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    padding: 0 15px;
+    transition: color 0.25s ease;
+}
+
+.menu-icon:hover {
+    color: var(--color-primary);
+}
+
+.menu-toggle:checked ~ .nav {
+    display: block;
+    animation: menu-open 0.3s ease forwards;
+}
+
+/*---- ANIMACION DEL MENU HAMBURGUESA ----*/
+@keyframes menu-open {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-wrap: nowrap;
+        width: 90%;
+        height: 55px;
+        overflow: visible;
+        padding: 10px 20px;
+        border-radius: 12px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top:60px;
+        left: 0;
+        width: 100%;
+        background: var(--color-surface);
+        border-radius: 0 0 12px 12px;
+        border-top: 1px solid var(--color-border);
+        padding: 5px 0;
+        }
+
+    .nav-list {
+        flex-direction: column;
+        gap:0;
+        padding:10px 0;
+    }
+
+    .nav-list a {
+        padding: 14px 10px;
+        border-bottom: 1px solid var(--color-border);
+        text-align: left;
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+    }
+
+    .nav-list li:last-child a {
+        border-bottom: none;
+    }
+
+    .menu-toggle:checked ~ .nav {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-reserva {
+        font-size: 0.8rem;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }   
+}
+
+
+/*--- SUBMENU CATEGORIAS CARRUSEL ---*/
+
+.categorias-wrapper {
+    position:sticky;
+    left: 0;
+    top: 90px;
+    bottom: auto;
+    transform: none;
+    width: fit-content;
+    max-width: 800px;
+    margin: 30px auto 20px;
+    z-index:100;
+    background: var(--color-surface);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.categorias-carrusel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+}
+
+
+.caterorias-carrusel::-webkit-scrollbar {
+    display: none; 
+}
+
+.categoria-card {
+    flex:0 0 auto;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all 0.25s ease;
+    min-width: 80px;
+}
+
+.categoria-card i {
+    font-size: 20px;
+    color: var(--color-primary);
+}
+
+.categoria-card span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.categoria-card:hover, .categoria-card:active {
+    background: var(--color-primary-hover);
+    border-color: var(--color-primary);
+    color: #000;
+}
+
+.categoria-card.active i, .categoria-card:hover i {
+    color: #000;
+}
+
+
+/*---- MENU SECCIONES ----*/
+.menu-section {
+    padding: 100px 20px 120px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.section-nota {
+    font-size: 0.75rem;
+    color: var(--color-gold-light);
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.platos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.plato-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.plato-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+.plato-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.plato-img.placeholder {
+    background: rgba(212,175,55,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plato-img.placeholder i {
+    font-size: 40px;
+    color: var(--color-primary);
+    opacity: 0.4;
+}
+
+.plato-info {
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.plato-info h3 {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.precio-tarjeta {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+
+
+
+/*---- MODAL ----*/
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+    animation: fadeIn 0.25s ease;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: var(--color-surface);
+    border: 1px solid var(--color-primary);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px; 
+    overflow: hidden;
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.modal-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.modal-img.placeholder {
+    background: rgba(212,175,55,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-img.placeholder i {
+    font-size: 60px;
+    color: var(--color-primary);
+    opacity: 0.3;
+}
+
+.modal-titulo {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 16px 16px 8px;
+    color: var(--color-primary);
+}
+
+.modal-desc {
+    font-size: 0.8rem;
+    padding: 0 16px 16px;
+    color: var(--color-text);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.modal-precios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--color-border);
+}
+
+.precio-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+    gap: 4px;
+    border-right: 1px solid var(--color-border);
+}
+
+.precio-box.efectivo {
+    border-right: 1px solid var(--color-border);
+    background: rgba(212,175,55,0.08);
+}
+
+.precio-label {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: var(--color-gold-light);
+}
+
+
+
+.precio-valor {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/*---- MODAL PIZZAS ----*/
+.precio-seccion {
+    width: 100%;
+    border-top: 1px solid var(--color-border);
+}
+
+.precio-seccion-titulo {
+    padding: 8px 16px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--color-gold-light);
+}
+
+.precio-fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*---- SIN ALCHOOL ----*/
+
+.plato-card-sm {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid var(--color-border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.25s ease;
+}
+
+.plato-card-sm .plato-img {
+    aspect-ratio: 3/2;  /* más chica que 4/3 */
+}
+
+.plato-card-sm .plato-img.placeholder i {
+    font-size: 28px;
+}
+
+.plato-card-sm .plato-info h3 {
+    font-size: 0.65rem;
+}
+
+.precios-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.precio-efectivo-card {
+    font-size: 0.65rem;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.subsection-title {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: var(--color-gold-light);
+    margin: 24px 0 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modal-ibu {
+    font-size: 0.75rem;
+    padding: 0 16px 12px;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="icon" href="../img/icono.ico" type="king ber">
+    <title>King Beer · Tragos y Cervezas</title>
+</head>
+<body>
+
+<!-- Video de fondo -->
+<video autoplay muted loop playsinline class="video-background">
+    <source src="../video/presentacion.mp4" type="video/mp4">
+</video>
+
+<!-- Overlay oscuro -->
+<div class="video-overlay"></div>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="../img/logo2.png" alt="Logo King Beer" class="main-logo">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="/index.html">INICIO</a></li>
+            <li><a href="/pag/camarero.html">COMIDA</a></li>
+            <li><a href="/pag/recepcionista.html">TRAGOS Y CERVEZAS</a></li>
+            <li><a href="/pag/bartender.html">ENVIÁ TU CV</a></li>
+        </ul>
+    </nav>
+    <div class="header-right">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <a href="/pag/runner.html" class="nav-reserva">RESERVAR</a>
+    </div>
+</header>
+
+<!-- CARRUSEL DE CATEGORÍAS -->
+<div class="categorias-wrapper">
+    <div class="categorias-carrusel">
+        <a href="#sin-alcohol" class="categoria-card">
+            <i class="ti ti-droplet"></i>
+            <span>SIN ALCOHOL</span>
+        </a>
+        <a href="#cervezas" class="categoria-card">
+            <i class="ti ti-beer"></i>
+            <span>CERVEZAS</span>
+        </a>
+        <a href="#tragos" class="categoria-card">
+            <i class="ti ti-glass-cocktail"></i>
+            <span>TRAGOS</span>
+        </a>
+        <a href="#espumantes" class="categoria-card">
+            <i class="ti ti-bottle"></i>
+            <span>ESPUMANTES</span>
+        </a>
+        <a href="#vinos" class="categoria-card">
+            <i class="ti ti-glass-wine"></i>
+            <span>VINOS</span>
+        </a>
+    </div>
+</div>
+
+<!-- SIN ALCOHOL -->
+<section id="sin-alcohol" class="menu-section">
+    <h2 class="section-title">SIN ALCOHOL</h2>
+    <p class="section-nota">Vaso de agua sin cargo · Efectivo 20% de descuento</p>
+
+    <div class="platos-grid">
+        <div class="plato-card-sm">
+            <div class="plato-img placeholder"><i class="ti ti-droplet"></i></div>
+            <div class="plato-info">
+                <h3>LIMONADA</h3>
+                <div class="precios-card">
+                    <span class="precio-tarjeta">tar. $6.000</span>
+                    <span class="precio-efectivo-card">ef. $4.800</span>
+                </div>
+            </div>
+        </div>
+        <div class="plato-card-sm">
+            <div class="plato-img placeholder"><i class="ti ti-droplet"></i></div>
+            <div class="plato-info">
+                <h3>NARANJADA</h3>
+                <div class="precios-card">
+                    <span class="precio-tarjeta">tar. $6.000</span>
+                    <span class="precio-efectivo-card">ef. $4.800</span>
+                </div>
+            </div>
+        </div>
+        <div class="plato-card-sm">
+            <div class="plato-img placeholder"><i class="ti ti-droplet"></i></div>
+            <div class="plato-info">
+                <h3>LICUADOS</h3>
+                <div class="precios-card">
+                    <span class="precio-tarjeta">tar. $8.000</span>
+                    <span class="precio-efectivo-card">ef. $6.400</span>
+                </div>
+            </div>
+        </div>
+        <div class="plato-card-sm">
+            <div class="plato-img placeholder"><i class="ti ti-droplet"></i></div>
+            <div class="plato-info">
+                <h3>AGUA SABORIZADA</h3>
+                <div class="precios-card">
+                    <span class="precio-tarjeta">tar. $4.375</span>
+                    <span class="precio-efectivo-card">ef. $3.500</span>
+                </div>
+            </div>
+        </div>
+        <div class="plato-card-sm">
+            <div class="plato-img placeholder"><i class="ti ti-droplet"></i></div>
+            <div class="plato-info">
+                <h3>GASEOSAS</h3>
+                <div class="precios-card">
+                    <span class="precio-tarjeta">tar. $4.375</span>
+                    <span class="precio-efectivo-card">ef. $3.500</span>
+                </div>
+            </div>
+        </div>
+        <div class="plato-card-sm">
+            <div class="plato-img placeholder"><i class="ti ti-droplet"></i></div>
+            <div class="plato-info">
+                <h3>SPEED</h3>
+                <div class="precios-card">
+                    <span class="precio-tarjeta">tar. $5.625</span>
+                    <span class="precio-efectivo-card">ef. $4.500</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CERVEZAS -->
+<section id="cervezas" class="menu-section">
+    <h2 class="section-title">CERVEZAS ARTESANALES</h2>
+    <p class="section-nota">Pinta · Efectivo 20% de descuento</p>
+
+    <h3 class="subsection-title">RUBIAS</h3>
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('cerv_golden')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>GOLDEN ALE</h3><span class="precio-tarjeta">$5.500</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cerv_honey')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>COLD HONEY</h3><span class="precio-tarjeta">$5.500</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cerv_imaking')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>IPA KING</h3><span class="precio-tarjeta">$5.500</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cerv_mosaic')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>IPA MOSAIC</h3><span class="precio-tarjeta">$5.500</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cerv_citra')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>IPA CITRA</h3><span class="precio-tarjeta">$5.500</span></div>
+        </div>
+    </div>
+
+    <h3 class="subsection-title">ROJAS</h3>
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('cerv_scottish')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>SCOTTISH EXPORT</h3><span class="precio-tarjeta">$5.500</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cerv_amber')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>TRIPLE A (AMBER)</h3><span class="precio-tarjeta">$5.500</span></div>
+        </div>
+    </div>
+
+    <h3 class="subsection-title">NEGRAS</h3>
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('cerv_stout')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>CHOCO STOUT</h3><span class="precio-tarjeta">$5.500</span></div>
+        </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:40px">CERVEZAS INDUSTRIALES</h2>
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('cerv_corona')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>CORONA</h3><span class="precio-tarjeta">$7.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cerv_balde')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>PROMO BALDE</h3><span class="precio-tarjeta">$36.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cerv_stella')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>STELLA ARTOIS</h3><span class="precio-tarjeta">$7.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cerv_bohemian')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>PATAGONIA BOHEMIAN</h3><span class="precio-tarjeta">$7.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('cerv_247')">
+            <div class="plato-img placeholder"><i class="ti ti-beer"></i></div>
+            <div class="plato-info"><h3>PATAGONIA 24.7</h3><span class="precio-tarjeta">$7.875</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- TRAGOS -->
+<section id="tragos" class="menu-section">
+    <h2 class="section-title">TRAGOS</h2>
+    <p class="section-nota">Efectivo 20% de descuento · Happy Hour de 17hs a 20:30hs</p>
+
+    <h3 class="subsection-title">HAPPY HOUR</h3>
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('trag_mojito')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>MOJITO</h3><span class="precio-tarjeta">$6.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('trag_cuba')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>CUBA LIBRE</h3><span class="precio-tarjeta">$6.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('trag_daiquiri')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>DAIQUIRI</h3><span class="precio-tarjeta">$6.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('trag_campari_orange')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>CAMPARI ORANGE</h3><span class="precio-tarjeta">$6.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('trag_campari_tonica')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>CAMPARI TÓNICA</h3><span class="precio-tarjeta">$6.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('trag_fernet')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>FERNET CON COLA</h3><span class="precio-tarjeta">$6.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('trag_caipirinha')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>CAIPIRINHA</h3><span class="precio-tarjeta">$6.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('trag_caipiroska')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>CAIPIROSKA</h3><span class="precio-tarjeta">$6.875</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('trag_sex')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>SEX ON THE BEACH</h3><span class="precio-tarjeta">$6.875</span></div>
+        </div>
+    </div>
+
+    <h3 class="subsection-title">SIN HAPPY HOUR</h3>
+    <div class="platos-grid">
+        <div class="plato-card" onclick="abrirModal('trag_negroni')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>NEGRONI</h3><span class="precio-tarjeta">$7.375</span></div>
+        </div>
+        <div class="plato-card" onclick="abrirModal('trag_caipiroska_esp')">
+            <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+            <div class="plato-info"><h3>CAIPIROSKA ESPECIAL</h3><span class="precio-tarjeta">$7.375</span></div>
+        </div>
+    </div>
+
+    <h3 class="subsection-title">VERMUTERÍA Y APERITIVOS</h3>
+<div class="platos-grid">
+    <div class="plato-card" onclick="abrirModal('verm_carpano')">
+        <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+        <div class="plato-info"><h3>CARPANO ROSSO</h3><span class="precio-tarjeta">$6.125</span></div>
+    </div>
+    <div class="plato-card" onclick="abrirModal('verm_cynar')">
+        <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+        <div class="plato-info"><h3>CYNAR</h3><span class="precio-tarjeta">$6.125</span></div>
+    </div>
+    <div class="plato-card" onclick="abrirModal('verm_gancia')">
+        <div class="plato-img placeholder"><i class="ti ti-glass-cocktail"></i></div>
+        <div class="plato-info"><h3>GANCIA BATIDO</h3><span class="precio-tarjeta">$6.125</span></div>
+    </div>
+</div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="cerrarModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="cerrarModal()">✕</button>
+        <div class="modal-img placeholder">
+            <i class="ti ti-beer"></i>
+        </div>
+        <h2 class="modal-titulo" id="modal-titulo"></h2>
+        <p class="modal-desc" id="modal-desc"></p>
+        <p class="modal-ibu" id="modal-ibu"></p>
+        <div class="modal-precios" id="modal-precios"></div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>King Beer · Tragos y Cervezas</p>
+    <span>La experiencia del cliente comienza en cada detalle</span>
+</footer>
+
+<script src="../script/java.js"></script>
+</body>
+</html>
